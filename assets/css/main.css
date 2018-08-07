@@ -1,5 +1,5 @@
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+@import url("https://fonts.googleapis.com/css?family=Roboto:200,400,200italic,400italic");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700');
 
 /*
@@ -28,7 +28,7 @@
 	}
 
 	ol, ul {
-		list-style: none;
+		/*list-style: none;*/
 	}
 
 	blockquote, q {
