@@ -1,4 +1,4 @@
-@@ -1,297 +0,0 @@
+
 require.config({
 
             paths: {
