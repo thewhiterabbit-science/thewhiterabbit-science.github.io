@@ -1,3 +1,4 @@
+@@ -1,297 +0,0 @@
 require.config({
 
             paths: {
@@ -15,34 +16,37 @@ require.config({
             'echarts',
 
             'echarts/chart/bar',
+            'echarts/chart/line',
 
             ],
 
             function (ec) {
 
-  //Gráfica 1
-  var myChart = ec.init(document.getElementById('main'));
+//Gráfica 1
+var myChart = ec.init(document.getElementById('main'));
    myChart.setOption({
-
-    tooltip : {
-        trigger: 'axis',
+   title: {
+        text: 'Staff working at',
+        y: 40
+    },
+   tooltip : {
+      show: false
+        // trigger: 'axis',
         // formatter: "{b}<br/>{a}: {c}",
        // position: [0,0]
     },
-    color: ['#4ad200'],
-    grid:{y:'80px',y2:'130px',x:'20',x2:'0', borderWidth: 0},
+    color: ['#4c275c','#a73266','#ec5a4a','#ffa600'],
+    grid:{y:'80px',y2:'80px',x:'20',x2:'0', borderWidth: 0},
     legend: {
-        data:['Cicloestaciones','Metro','Metrobús', 'Ferrocarril Suburbano', 'Nochebús y corredores concesionados','Red de Transporte de Pasajeros (RTP)', 'Trolebús'],
-        selectedMode: 'single',
+        data:['Production', 'Postproduction','Distribution', 'Exhibition'],
+        // selectedMode: 'single',
         selected: {
-          'Metro': false,
-          'Metrobús': false,
-          'Ferrocarril Suburbano': false, 
-          'Nochebús y corredores concesionados': false,
-          'Red de Transporte de Pasajeros (RTP)': false,
-          'Trolebús': false,
+          'Postproduction': false,
+          'Distribution': false,
+          'Exhibition': false, 
         },
-        x: 'left'
+        // x: 'center',
+        y: 'top'
     },
     toolbox: {
         show : false,
@@ -86,7 +90,7 @@ require.config({
                  baseline: 'middle'
               }
           },
-          data : ['Buenavista', 'Juárez', 'Centro', 'Roma Norte', 'Hipódromo', 'Roma Sur', 'Narvarte Poniente', 'Tabacalera', 'Del Valle Centro', 'Del Valle Sur'],
+          data :['0 to 5 ', '6 to 10 ', '11 to 30 ', '31 to 50 ', '51 to 100 ', '101 to 250', '251 and more'],
         }
     ],
     yAxis : [
@@ -127,62 +131,51 @@ require.config({
     ],
     series : [
            {
-              name:'Cicloestaciones', 
+              name:'Production', 
               type:'bar',
-              data: [12, 25, 31, 38, 19, 15, 13, 6, 14, 23],
+              data: [41, 8, 9, 1, 4, 0, 1],
             },
             {
-              name:'Metro', 
+              name:'Postproduction', 
               type:'bar',
-              data: [3, 2, 10, 1, 1, 1, 3, 1, 1, 1],
+              data: [19, 12, 12, 1, 2, 0, 0],
             },
             {
-              name:'Metrobús', 
+              name:'Distribution', 
               type:'bar',
-              data: [8, 5, 64, 5, 5, 3, 3, 10, 1, 0],
+              data: [3, 4, 2, 3, 4, 1, 1],
             },
             {
-              name:'Ferrocarril Suburbano', 
+              name:'Exhibition', 
               type:'bar',
-              data: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            },
-            {
-              name:'Nochebús y corredores concesionados', 
-              type:'bar',
-              data: [3, 4, 0, 6, 6, 3, 0, 4, 1, 1],
-            },
-            {
-              name:'Red de Transporte de Pasajeros (RTP)', 
-              type:'bar',
-              data: [20, 21, 19, 13, 4, 0, 0, 4, 0, 12],
-            },
-            {
-              name:'Trolebús', 
-              type:'bar',
-              data: [0, 0, 10, 12, 2, 0, 0, 0, 0, 8],
-            }            
+              data: [24, 7, 16, 42, 22, 4, 1],
+            }    
     ]
-
-
-   });
-   //
+  });
   var myChart2 = ec.init(document.getElementById('main2'));
-   myChart2.setOption({
-
+  myChart2.setOption({
+    title: {
+        text: 'Year of registration',
+        y: 40
+    },
     tooltip : {
-        trigger: 'axis',
-        formatter: "{b}<br/>{a}: ${c}",
+      show: false
+        // trigger: 'axis',
+        // formatter: "{b}<br/>{a}: {c}",
        // position: [0,0]
     },
-    color: ['#3FB8AF'],
-    grid:{y:'40px',y2:'150px',x:'60',x2:'0', borderWidth: 0},
+    color: ['#4c275c','#a73266','#ec5a4a','#ffa600'],
+    grid:{y:'80px',y2:'70px',x:'20',x2:'0', borderWidth: 0},
     legend: {
-        data:['Venta','Renta' ],
-        selectedMode: 'single',
+        data:['Production', 'Postproduction','Distribution', 'Exhibition'],
+        // selectedMode: 'single',
         selected: {
-          'Renta': false,
+          'Postproduction': false,
+          'Distribution': false,
+          'Exhibition': false, 
         },
-        x: 'left'
+        x: 'left',
+        show: false,
     },
     toolbox: {
         show : false,
@@ -226,7 +219,7 @@ require.config({
                  baseline: 'middle'
               }
           },
-          data : ['Buenavista', 'Juárez', 'Centro', 'Roma Norte', 'Hipódromo', 'Roma Sur', 'Narvarte Poniente', 'Tabacalera', 'Del Valle Centro', 'Del Valle Sur'],
+          data :[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
         }
     ],
     yAxis : [
@@ -245,7 +238,7 @@ require.config({
             },
             axisLabel : {
               rotate:0,
-              formatter: '${value}',
+              // formatter: '{value}',
               show: true,
               margin: 5,
               textStyle: {
@@ -267,20 +260,39 @@ require.config({
     ],
     series : [
            {
-              name:'Venta', 
-              type:'bar',
-              data: [1065030, 3861838.131, 1320000, 4927587.5, 5349020, 3793070, 2780810, 4500000, 3717570, 3850000],
+              name:'Production', 
+              type:'line',
+              data: [19, 6, 13, 0, 17, 0, 3, 6, 0],
             },
             {
-              name:'Renta', 
-              type:'bar',
-              data: [8500, 28126.61017, 12875, 22750, 24556, 17813, 13500, 22154, 15625, 17900],
+              name:'Postproduction', 
+              type:'line',
+              data: [18, 5, 4, 0, 12, 0, 10, 0, 0],
             },
-
-            
+            {
+              name:'Distribution', 
+              type:'line',
+              data: [9, 2, 2, 0, 2, 0, 2, 0, 0],
+            },
+            {
+              name:'Exhibition', 
+              type:'line',
+              data: [65, 2, 6, 2, 14, 0, 11, 5, 1],
+            }    
     ]
+  });
 
+// myChart2 = ec.init(document.getElementById('main2'));
+// myChart2.setOption(option2);
 
-   });
+myChart.connect(myChart2);
+myChart2.connect(myChart);
+
+setTimeout(function (){
+    window.onresize = function () {
+        myChart.resize();
+        myChart2.resize();
+    }
+},200)
 // 
- });
+ }); 
