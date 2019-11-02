@@ -1,0 +1,342 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: var(--black);
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+/*Colors*/
+:root {
+    --tiffany: #90FCF9;
+    --purple: #5D4FAC;
+    --green: #32e2a1;
+    --yellow: #D0FD61;
+    --teal: #59c3c3;
+    --light-teal: #DDF3F3;
+    --black: #4A4A4A;
+}
+
+/*Buttons*/
+.btn-primary {
+    background: transparent;
+    border-color: var(--tiffany);
+    color: var(--tiffany);
+    border-radius: 20rem;
+    font-weight: 800;
+    padding: 10px 40px;
+}
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle,
+.btn-primary:hover {
+    background-color: var(--tiffany);
+    background-color: var(--tiffany);
+    color: var(--black);
+}
+.btn-secondary {
+    background: linear-gradient(101deg, #59c3c3, #63b4d1 100%);
+    font-weight: 400;
+    padding: 5px 40px;
+    border: none;
+    border-radius: 2rem;
+}
+.btn-outline-success {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--black);
+}
+.btn-outline-success:not(:disabled):not(.disabled).active, 
+.btn-outline-success:not(:disabled):not(.disabled):active, 
+.show>.btn-outline-success.dropdown-toggle,
+.btn-outline-success:hover {
+    background-color: transparent;
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+.btn-outline-success.focus, 
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(208,253,97,.5);
+}
+
+/*My Styles*/
+.navbar {
+    background: linear-gradient(94deg, #6d52c7, #493e85);
+    box-shadow: 2px 2px 10px 0px rgba(57,51,91,0.5);
+}
+.navbar .nav-item .nav-link,
+.navbar-dark .navbar-brand{
+    color: var(--white);
+}
+.navbar-dark .navbar-nav .nav-link:focus, 
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--light-teal);
+    font-weight: 400;
+}
+.navbar-nav li {
+    margin-right: 10px;
+}
+.dropdown-item {
+    color: var(--purple);
+    font-weight: 200;
+    border-bottom: 1px dotted var(--purple);
+}
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+.navbar-dark .navbar-toggler {
+    border-color: var(--white);
+}
+.dropdown-item.active, 
+.dropdown-item:active,
+.dropdown-item:focus, 
+.dropdown-item:hover {
+    background-color: var(--purple);
+    font-weight: 400;
+    color: var(--white);
+}
+/*Header*/
+.jumbotron {
+    background: url(../img/header-bg.svg) center bottom no-repeat;
+    background-size: 201% 200%; 
+    color: var(--white);
+    height: 540px;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.display-4 {
+    color: var(--tiffany);
+    font-weight: 800;
+    font-size: 2.625rem;
+}
+.jumbotron p {
+    font-size: 1.3125rem;
+    margin-bottom: 3rem;
+    color: var(--white);
+}
+.jumbotron img {
+    width: 100%;
+}
+/*Servicios*/
+.servicios {
+    background: url(../img/header-bttm.svg) center top no-repeat;
+    background-size: 200%;
+    padding: 10rem 0 0;
+    padding-bottom: 40px;
+}
+.servicios h2 {
+    margin-bottom: 4rem;
+    font-weight: 200;
+}
+.card {
+    position: relative;
+    border-radius: 5px;
+    border: var(--green) 1px solid;
+    box-shadow: 1px 2px 10px 0 rgba(202, 210, 197, 0.7);
+    background-color: var(--white);
+    max-width: 457px;
+}
+.mini-image {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background: radial-gradient(circle at 0 0, #7c61d6, #58508d);
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card h5 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--green);
+    padding: 20px 20px 0 120px;
+    border: none;
+    background: none;
+}
+.card-text {
+    font-size: 1.2rem;
+}
+
+/*Equipo*/
+.equipo {
+    background: var(--purple);
+}
+.equipo:after,
+.equipo:before {
+    content: '';
+    background-color: var(--white);
+    background-image: url(../img/team-top.svg);
+    background-size: 201% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    height: 150px;
+}
+.equipo:after {
+    background-image: url(../img/team-bottom.svg);
+    background-position: center top;
+}
+.equipo h2,
+.equipo p {
+    color: var(--white);
+}
+.equipo h2 {
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+.equipo .txt {
+    padding: 40px 0;
+
+}
+.equipo .btn-secondary {
+    margin-bottom: 40px;
+}
+
+/*Proceso*/
+.proceso h2 {
+    /*text-align: center;*/
+    margin-bottom: 2rem;
+}
+.proceso img,
+.proceso h3 {
+    display: block;
+    margin: 0 auto 1rem;
+}
+.proceso h3 {
+    color: var(--teal);
+    max-width: 260px;
+}
+
+/*Ventajas*/
+.ventajas {
+    background: var(--light-teal);
+}
+.ventajas:after,
+.ventajas:before{
+    content: '';
+    background-color: var(--white);
+    background-image: url(../img/advantage-top.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    height: 150px;
+}
+.ventajas:after {
+    background-image: url(../img/advantage-bottom.svg);
+    background-position: center top;
+}
+.ventajas .row {
+    margin: 2rem 0;
+}
+.ventajas h2,
+.ventajas h3 {
+    color: var(--teal);
+    text-align: center;
+}
+.ventajas h2 {
+    margin-bottom: 4rem;
+}
+.ventajas h3 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.ventajas p {
+    text-align: center;
+}
+
+/*Contacto*/
+.contacto {
+    background: #52489C;
+    padding-bottom: 3rem;
+}
+.contacto:before {
+    content: '';
+    background-color: var(--white);
+    background-image: url(../img/contact-top.svg);
+    background-size: 201% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    height: 150px;
+}
+.contacto h2 {
+    color: var(--green);
+    /*font-weight: 800;*/
+    margin-bottom: 1rem;
+}
+.contacto h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 200;
+}
+.contacto p,
+.contacto h4  {
+    color: var(--white);
+}
+.contacto p {
+    font-size: 1rem;
+}
+.redes-sociales {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.contacto li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px;
+}
+.contacto .fab {
+    color: var(--light-teal);
+    font-size: 2.5rem;
+}
+footer {
+    background: #39335b;
+    padding: 1rem 0;
+}
+footer p {
+    text-align: center;
+    color: var(--white);
+    margin: 0;
+    font-size: 0.875rem;
+}
+@media (max-width: 1023px) { 
+    .jumbotron {
+        background-position: center;
+        background-size: cover;
+    }
+}
+@media (max-width: 960px) { 
+    .equipo .txt {
+        padding: 0 0 40px;
+    }
+    .proceso h3 {
+        text-align: center;
+    }
+}
+@media (max-width: 720px) { 
+    .equipo:after, 
+    .equipo:before {
+        background-size: auto;
+    }
+    .proceso p:last-child {
+        margin-bottom: 40px;
+    }
+    .contacto:before {
+        background-size: contain;
+    }
+}
+@media (max-width: 540px) { 
+    .display-4,
+    .ventajas h3 {
+        font-size: 2rem;
+    }
+    .col-12 p {
+        margin: 0 10px;
+    }
+}

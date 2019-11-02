@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1025 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Group-3">
+        <g id="Rectangle-Copy-9" transform="matrix(1.00197,2.41314e-19,-2.41314e-19,-1,-2.01777,104)">
+            <path d="M0,0L1024,0L0,104L0,0Z" style="fill:rgb(124,97,214);"/>
+        </g>
+        <g id="Rectangle-Copy-11" transform="matrix(1.00304,2.63405e-19,-2.63405e-19,-1.00089,-1.49429,115.107)">
+            <path d="M1024.86,9.997L1025,104.672L0.454,39.61L0.566,10L1024.86,9.997Z" style="fill:rgb(82,72,156);"/>
+        </g>
+    </g>
+</svg>
